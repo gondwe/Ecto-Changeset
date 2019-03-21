@@ -1,0 +1,28 @@
+
+
+<%= form_for @changeset, HelloWeb.Router.Helpers.page_path(@conn, :save, @post), [method: :put], fn f-> %>
+    
+    <h5><%= @post.post %></h5> <hr>
+
+    <div class="form-inline">
+    
+
+    <div class="form-check">
+
+        <label for="form-check-label">
+            
+            <%= checkbox f, :approved, class: "form-check-input"%> Approved
+        
+        </label>
+        
+    </div>
+
+        <%= submit "Save", class: "btn btn-success btn-sm ml-2"%>
+
+    </div>
+
+<% end %>
+
+
+
+
